@@ -82,7 +82,7 @@ break;
 
 default:
 
-{
+{  
 
 printf("Niewlasciwie wprowadzone dane.\nTry again:)\n");
 
