@@ -1,5 +1,5 @@
     Program dokonuj¹cy operacji na macierzach.
-
+To jest druga linijka i ja robie w niej zmiany 
 #include <stdio.h>
 
 /*Wczytanie macierzy z pliku*/
