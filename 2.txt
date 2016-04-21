@@ -1,4 +1,4 @@
-    Program obliczaj¹cy najwiêksz¹ liczbê pierwsz¹ mniejsz¹ od zadanego n.
+Zmiannnyyyyyy     Program nie obliczaj¹cy nuasdawqwe liczbê pierwsz¹ mniejsz¹ od zadanego n.
 
 #include <stdio.h>
 
