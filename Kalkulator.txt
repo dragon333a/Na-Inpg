@@ -89,7 +89,7 @@ printf("Niewlasciwie wprowadzone dane.\nTry again:)\n");
 exit(1);
 
 }  
-
+dgsdfhdfgdgdf
 }
 
 printf("Wynik dzialania %c wynosi: %.3f\n\n", operator, result);
