@@ -1,0 +1,195 @@
+    Program dokonuj¹cy operacji na macierzach.
+
+#include <stdio.h>
+
+/*Wczytanie macierzy z pliku*/
+
+int flag=0;
+
+int wczytanie(double **macierz, FILE *plik, int *rozmiar)
+
+{
+
+int i, j;
+
+for(i=0; i<(*rozmiar); i++)
+
+{
+
+for(j=0; j<(*rozmiar); j++)
+
+{
+
+fscanf(plik, "%lf",&macierz[i][j]);
+
+}
+
+}
+
+fclose(plik);
+
+flag=1;
+
+}//koniec funkcji
+
+/*Wyswietlenie macierzy*/
+
+int wyswietlenie(double **mac, int *rozmiar)
+
+{
+
+int i, j;
+
+if(flag!=1) printf("\n\tUWAGA! Nie wczytales macierzy. Macierz jest pusta.\n");
+
+else
+
+{
+
+printf("\nRozmiar macierzy = %d\n\n", *rozmiar);
+
+for(i=0; i<(*rozmiar); i++)
+
+{
+
+for(j=0; j<(*rozmiar); j++)
+
+{
+
+printf("%.1lf\t",mac[i][j]);
+
+}
+
+printf("\n");
+
+}
+
+}//else
+
+}//koniec funkcji
+
+/*Mnozenie macierzy przez skalar*/
+
+int mnozprzezskal(double **mac, int *rozmiar)
+
+{
+
+int i, j;
+
+double skalar;
+
+if(flag!=1) printf("\n\tUWAGA! Nie mozesz mnozyc pustej macierzy. Wczytaj macierz\n");
+
+else
+
+{
+
+printf("Podaj liczbe przez ktora chcesz pomnozyc macierz ");
+
+scanf("%lf", &skalar);
+
+for(i=0; i<(*rozmiar); i++)
+
+{
+
+for(j=0; j<(*rozmiar); j++)
+
+{
+
+mac[i][j]*=skalar;
+
+printf("%.1lf\t", mac[i][j]);
+
+}
+
+printf("\n");
+
+}//koniec for
+
+}//else
+
+}//koniec funkcji
+
+/*Dodawanie macierzy*/
+
+int suma(double **mac, int *rozmiar )
+
+{
+
+int i, j;
+
+int rozm;
+
+double **mac2;
+
+char nazwa_pliku[20];
+
+FILE *stream;
+
+double suma[*rozmiar][*rozmiar];
+
+if(flag!=1) printf("\n\tUWAGA! Nie mozesz sumowac pustej macierzy. Wczytaj macierz\n");
+
+else
+
+{
+
+printf("Podaj plik z ktorego chcesz wczytac macierz: ");
+
+scanf("%s", &nazwa_pliku);
+
+stream=fopen(nazwa_pliku, "r");
+
+if(stream==NULL) printf("Nie udalo sie wczytac pliku..");
+
+fscanf(stream,"%d", &rozm);
+
+mac2=(double**)malloc(rozm*sizeof(double));
+
+for(i=0; i<rozm; i++)
+
+mac2[i]=(double*)malloc(rozm*sizeof(double));
+
+for(i=0; i<rozm; i++)
+
+{
+
+for(j=0; j<rozm; j++)
+
+{
+
+fscanf(stream, "%lf",&mac2[i][j]);
+
+}
+
+}
+
+if((*rozmiar)==rozm) //rozm - rozmiar podanej macierzy ktora chcemy dodac
+
+{
+
+for(i=0; i<(*rozmiar); i++)
+
+{
+
+for(j=0; j<(*rozmiar); j++ )
+
+{
+
+suma[i][j]=mac[i][j]+mac2[i][j];
+
+printf("%.1lf\t",suma[i][j]);
+
+}
+
+printf("\n");
+
+}
+
+}//koniec if
+
+else printf("\nNiewlasciwy rozmiar macierzy.Rozmiary macierzy musza byc sobie rowne.\n");
+
+}//else
+
+}//koniec funkcji
