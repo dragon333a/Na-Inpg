@@ -88,7 +88,7 @@ printf("Niewlasciwie wprowadzone dane.\nTry again:)\n");
 
 exit(1);
 
-}
+}  
 
 }
 
