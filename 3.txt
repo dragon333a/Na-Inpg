@@ -1,4 +1,4 @@
-    Program dokonuj¹cy operacji na macierzach.
+zmiana tu jest
 
 #include <stdio.h>
 
