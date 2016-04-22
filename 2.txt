@@ -1,7 +1,7 @@
   zmiany zmiany na inpg mamy
 
 #include <stdio.h>
-
+asda
 int pierwsze(int n,int pier,int k, int tab[]);
 
 int tab[1000];
