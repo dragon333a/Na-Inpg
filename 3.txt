@@ -1,5 +1,5 @@
 zmiana tu jest
-
+To jest druga linijka i ja robie w niej zmiany 
 #include <stdio.h>
 
 /*Wczytanie macierzy z pliku*/
