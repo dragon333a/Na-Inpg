@@ -66,4 +66,4 @@ return(pierwsze(n,pier,k+1,tab));
 
 }
 
-Czy siê uda?
+Czy siê uda? 
