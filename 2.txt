@@ -1,4 +1,4 @@
-    Program obliczaj¹cy najwiêksz¹ liczbê pierwsz¹ mniejsz¹ od zadanego n.
+  zmiany zmiany na inpg mamy
 
 #include <stdio.h>
 
