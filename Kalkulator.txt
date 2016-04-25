@@ -97,3 +97,4 @@ printf("Wynik dzialania %c wynosi: %.3f\n\n", operator, result);
 return(0);
 
 }
+Inne
