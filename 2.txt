@@ -1,4 +1,4 @@
-  zmiany zmiany na inpg mamy
+  zmiany zmiany na inpg mamy tu
 
 #include <stdio.h>
 
