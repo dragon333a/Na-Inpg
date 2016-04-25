@@ -1,4 +1,4 @@
-  zmiany zmiany na inpg mamy tu
+  zmiany zmiany na inpg mamy tutaj
 
 #include <stdio.h>
 asda
